@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOGIN</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    
+    </head>
+    <body>
+        
+       <div class="login">
+           <form id="form_id" method="post" name="myform">
+               <input type="text" placeholder="username" name="username" id="username" class="inputEnter"/><br />
+               <input type="password" placeholder="password" name="password" id="password" class="inputEnter"/><br />
+     		   <input type="button" value="Login" id="submit" onclick="loginAgents()"/>
+           </form>
+           
+        </div> 
+        <p id="test"></p>
+          
+        <script>
+            
+        	var attempt = 3;
+            var agents = [{username: "ken",password:"araniador",firstname:"kenenth"},
+						  {username: "kin",password:"urbano",firstname:"kin"}]; 
+			var evt = document.querySelectorAll(".inputEnter")
+			for(var i = 0;i < evt.length;i++){
+			evt[i].addEventListener("keypress", function (evnt) {
+				
+				var key = evnt.which || evnt.keyCode;
+				if (key === 13){
+					loginAgents();
+				}
+			})	}		
+				
+			
+			
+			       function loginAgents () {
+				       var usr = document.getElementById("username").value;
+				       var pss = document.getElementById("password").value;
+				
+				       for(var x = 0; x < agents.length; x++){
+					
+					if (usr === agents[x].username && pss === agents[x].password)  {
+						alert("dofdigouig");
+						return false;
+					}	
+				}
+					attempt--;
+					alert("You have " + attempt + " left");
+				
+					if(attempt === 0){ 
+					document.getElementById("username").disabled = true;
+					document.getElementById("password").disabled = true;
+					document.getElementById("submit").disabled = true;
+					alert("You can no longer try");
+					return false;}	
+			}
+			
+			
+           
+         
+/*
+ 
+if( attempt === 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}*/
+
+
+        </script>
+    </body>
+
+</html>
