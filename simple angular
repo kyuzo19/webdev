@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Angular</title>
+    
+    
+    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	
+	
+    <style>
+        .masthead{
+            height: 100px;
+        }
+    .jumbotron {
+        background: url('http://cdn2.editmysite.com/images/editor/theme-background/stock/Table-Conversation.jpg') no-repeat center center;
+        height: 550px; 
+        padding-right: 60px;
+        padding-left: 60px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        }
+        .jumbotron > .container {
+           background-color: dimgrey;
+           height: 550px; 
+           width: 500px;
+           padding: 40px;
+             }    
+    </style>
+    
+    </head>
+    <body ng-app="myApp" ng-controller="switchCtrl">
+       
+        <div class="container">
+         <div class="masthead">
+         <nav>
+          <ul class="nav nav-justified">
+            <li ng-click="clickHome()"><a href="#" >HOME</a></li>
+            <li ng-click="clickAbout()"><a href="#">ABOUT</a></li>
+            <li ng-click="clickContact()"><a href="#">CONTACT</a></li>
+            <li ng-click="clickBlog()"><a href="#">BLOG</a></li>  
+          </ul>
+        </nav>
+      </div>
+            </div>
+        <div id="home" ng-show="navHome"> 
+          <div class="jumbotron">
+              <div class="container text-center" >
+				  <h1>Outsourcify</h1>
+				  <hr>
+        			<p class="lead">Adaptive Staff Outsourcing and Web Application Development </p>
+				   <p><a class="btn btn-lg btn-success" href="#" role="button">Contact Us</a></p>
+                  </div>
+			</div>
+      <h1>SERVICES</h1>
+        <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-4">
+            	<img src="images/page-layouts-_5580378_orig.jpeg" height="140" width="140">
+          		<h2>Dedicated remote staff</h2>
+         		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant. </p>
+         	</div>
+        	<div class="col-lg-4">
+             	<img  src="images/page-layouts-_6255498_orig.jpeg" height="140" width="140">
+				<h2>Virtual contact center</h2>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant. </p>
+          	</div>
+        	<div class="col-lg-4">
+             	<img  src="images/page-layouts-_7734409_orig.jpeg" height="140" width="140">
+				<h2>Web application development</h2>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant.</p>
+          	</div>
+      </div>
+            </div>
+        <h1>RECENT NEWS</h1>
+ <div class="container ">
+              <div class="row">         
+        		<div class="col-lg-6">
+          	<img src="images/page-layouts-2302963_orig.jpeg" height="140" width="140">
+          	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+         
+       </div>
+        <div class="col-lg-6">
+		<img  src="images/page-layouts-5880274_orig.jpeg" height="140" width="140">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+          
+        </div>
+      </div>
+        </div>
+		</div>
+		<!--End of homepage-->
+        
+		
+		<div id="About" ng-show="navAbout">
+		<div class="container">
+			<h1>Meet the Team</h1>
+			<div class="container">
+			<div  class="row">
+				<div class="pics"></div>
+			<!--<div class="col-lg-4"><img class="img-circle" src="images/page-layouts-1408107.jpg" height="140" width="140"></div>
+				<div class="col-lg-4"><img class="img-circle" src="images/page-layouts-3112451.jpg" height="140" width="140"></div>
+				<div class="col-lg-4"><img class="img-circle" src="images/page-layouts-5658534.jpg" height="140" width="140"></div>
+					-->
+				</div>
+			</div>
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-4"><img class="img-circle" src="images/page-layouts-9376147.jpg" height="140" width="140"></div>
+				<div class="col-lg-4"><img class="img-circle" src="images/page-layouts-6403397.jpg" height="140" width="140"></div>
+				<div class="col-lg-4"><img class="img-circle" src="images/page-layouts-3271736.jpg" height="140" width="140"></div>
+				</div>
+			</div>
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+			
+			
+			
+			
+			</div>
+		
+	
+		</div> 
+		<!--End of About page-->
+		<div id="contact" ng-show="navContact">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+				<h1>CONTACT US</h1>
+				<p>We are an outsourcing firm with over eight years in experience reducing the bottom line for small businesses while maintaining, if not improving, the same professional level of service.</p>
+				<form>
+ 
+					
+  <div class="form-group">
+    <label for="fullName">Name</label>
+    <input type="text" class="form-control" id="fullName" placeholder="Name">
+  </div>
+					 <div class="form-group">
+    <label for="emailAddress">Email address</label>
+    <input type="email" class="form-control" id="emailAddress" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="commentArea">Comment</label>
+   <textarea class="form-control" rows="3"></textarea>
+    
+  </div>
+ 
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+				</div>
+				<div class="col-lg-4">
+
+<address>
+	<strong>EMAIL ADDRESS</strong><br>
+  <a href="mailto:#">hi@outsourcify.net</a>
+</address>
+				<address>
+  <strong>TELEPHONE NUMBER</strong><br>
+  415-555-1234
+</address>
+					<address>
+  <strong>Physical Address</strong><br>
+111 Broadway Ave
+New York, NY 10003
+</address>
+				</div>
+				</div>
+			</div>
+		
+		</div>
+		<!--End of Contact page-->
+		<div id="blog" ng-show="navBlog">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-10"></div>
+				<div class="col-lg-2">
+				<h1>Author</h1>
+				<p>Write something about yourself. No need to be fancy, just an overview. </p>
+				<h1>Archives</h1>
+				<p>No Archives </p>
+				<h1>Categories</h1>
+					<a href="#">All</a>
+				</div>
+				</div>
+			</div>
+		</div>
+		<!--End of Blog page-->
+		
+    
+   
+          <script>
+		var app = angular.module('myApp', []);
+			  app.controller('switchCtrl' ,function($scope) {
+				  $scope.navHome = 1;
+				  $scope.clickHome = function(){
+					   $scope.navHome = 1;
+					   $scope.navAbout = 0;
+					   $scope.navContact = 0;
+					   $scope.navBlog = 0;
+				  };
+				  $scope.clickAbout = function(){
+					   $scope.navHome = 0;
+					   $scope.navAbout = 1;
+					   $scope.navContact = 0;
+					   $scope.navBlog = 0;
+				  };
+				  $scope.clickContact = function(){
+					   $scope.navHome = 0;
+					   $scope.navAbout = 0;
+					   $scope.navContact = 1;
+					   $scope.navBlog = 0;
+				  };
+				  $scope.clickBlog = function(){
+					   $scope.navHome = 0;
+					   $scope.navAbout = 0;
+					   $scope.navContact = 0;
+					   $scope.navBlog = 1;
+				  };
+			  });
+			  
+	/*		  var arrayPics = ["images/page-layouts-1408107.jpg","images/page-layouts-3112451.jpg","images/page-layouts-5658534.jpg"];
+			  
+			  for (var x=0, x < arrayPics.length, x++){
+				  
+				  iHtml += '<div class="col-lg-4"><img'  height="140" width="140"></div>"
+				  
+				  document.getElementById("id").innerHTML = iHtml;
+			  }
+			  
+			  */
+		</script>
+        
+      
+    </body>
+</html>
